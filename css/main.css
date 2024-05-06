@@ -6,12 +6,12 @@
     background: none;
     background-color: rgba(220, 220, 220, 0.3843137255);
   }
-  .fonction_card {
+  .fonction_cards {
     flex-direction: column;
     align-items: center;
     padding-left: 15px;
   }
-  .fonction_card_number {
+  .fonction_cards_number {
     width: 95%;
     margin-bottom: 20px;
     box-shadow: 1px 2px 20px rgba(167, 167, 167, 0.5);
@@ -22,9 +22,24 @@
   .restaurants_card_figure_img {
     height: 250px;
   }
+  .footer {
+    padding-bottom: 20px;
+  }
+  .footer_list {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    padding: 0;
+    padding-inline-start: 20px;
+  }
 }
+.header_icon {
+  font-size: 1.25rem;
+}
+
 body {
   margin: 15px auto;
+  font-family: "Roboto";
 }
 body a {
   text-decoration: none;
@@ -60,7 +75,6 @@ input[type=checkbox] {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 65px;
   padding: 5px;
   background-color: #dedcdc;
 }
@@ -90,6 +104,66 @@ i.fa-solid.location_icon {
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+}
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fonction {
+  padding: 30px 15px;
+}
+.fonction_header {
+  font-size: 1rem;
+  margin: 0px 0px 35px 20px;
+}
+.fonction_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+.fonction_cards_card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(231, 231, 231, 0.3843137255);
+  width: 30%;
+  height: 100px;
+  box-shadow: 2px 5px 20px rgba(167, 167, 167, 0.5);
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: default;
+  transition: transform 250ms ease-in-out;
+}
+.fonction_cards_card:hover {
+  transform: scale(1);
+  background-color: rgba(146, 86, 220, 0.1921568627);
+}
+.fonction_cards_card:hover .fonction_cards_card_icon {
+  color: #9356DC;
+}
+.fonction_cards_card_number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 35px;
+  height: 35px;
+  margin-left: -20px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 30px;
+}
+.fonction_cards_card_icon {
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0px 20px;
+  font-size: 25px;
+}
+.fonction_cards_card_title {
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

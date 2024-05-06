@@ -38,26 +38,29 @@
 
 <!-- Fonctionnement -->
 <section class="fonction center">
-    <h2>Fonctionnement</h2>
+    <div class="fonction_header">
+        <h2 class="fonction_title">Fonctionnement</h2>
+    </div>
 
-    <div class="fonction_card">
-        <div class="fonction_card_number">1</div>
-        <i class="fa-solid fa-mobile-screen-button"></i>
+<div class="fonction_cards">
+    <div class="fonction_cards_card">
+        <div class="fonction_cards_card_number">1</div>
+        <i class="fa-solid fa-mobile-screen-button fonction_cards_card_icon"></i>
         <h3>Choissez un restaurant</h3>
     </div>
 
-    <div class="fonction_card">
-        <div class="card_number">2</div>
-        <i class="fa-solid fa-list-ul"></i>
+    <div class="fonction_cards_card">
+        <div class="fonction_cards_card_number">2</div>
+        <i class="fa-solid fa-list-ul fonction_cards_card_icon"></i>
         <h3>Composez votre menu</h3>
     </div>
 
-    <div class="fonction_card">
-        <div class="card_number">3</div>
-        <i class="fa-solid fa-store"></i>
+    <div class="fonction_cards_card">
+        <div class="fonction_cards_card_number">3</div>
+        <i class="fa-solid fa-store fonction_cards_card_icon"></i>
         <h3>Dégustez au restaurant</h3>
     </div>
-
+</div>
 </section>
 
 <!-- Restaurants -->
@@ -77,18 +80,18 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_1" name="like_restaurant" value="1">
+        <input type="checkbox" id="restaurant_1" name="restaurant_like" value="1">
         <label for="restaurant_1">
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart icons_like"></i>
+            <i class="fa-regular fa-heart icons_nolike"></i>
         </label>
     </article>
 
 
-    <article class="restaurants_cards">
+    <article class="restaurants_card">
         <a href="restaurants/la_note_enchantee.html">
-            <figure>
-                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+            <figure class="restaurants_card_figure">
+                <img class="restaurants_card_figure_img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                 <div class="new">Nouveau</div>
                 <figcaption>
                     <h3>La note enchantée</h3>
@@ -96,46 +99,46 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_2" name="like_restaurant" value="2">
+        <input type="checkbox" id="restaurant_2" name="restaurant_like" value="2">
         <label for="restaurant_2">
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart icons_like"></i>
+            <i class="fa-regular fa-heart icons_nolike"></i>
         </label>
     </article>
 
 
-    <article class="restaurants_cards">
+    <article class="restaurants_card">
         <a href="restaurants/a_la_francaise.html">
-            <figure>
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+            <figure class="restaurants_card_figure">
+                <img class="restaurants_card_figure_img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
                 <figcaption>
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_3" name="like_restaurant" value="3">
+        <input type="checkbox" id="restaurant_3" name="restaurant_like" value="3">
         <label for="restaurant_3">
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart icons_like"></i>
+            <i class="fa-regular fa-heart icons_nolike"></i>
         </label>
     </article>
 
 
-    <article class="restaurants_cards">
+    <article class="restaurants_card">
         <a href="restaurants/le_delice_des_sens.html">
-            <figure>
-                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+            <figure class="restaurants_card_figure">
+                <img class="restaurants_card_figure_img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                 <figcaption>
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_3" name="like_restaurant" value="3">
+        <input type="checkbox" id="restaurant_3" name="restaurant_like" value="3">
         <label for="restaurant_3">
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-heart icons_like"></i>
+            <i class="fa-regular fa-heart icons_nolike"></i>
         </label>
     </article>
 </div>

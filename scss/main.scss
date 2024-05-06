@@ -1,4 +1,5 @@
 @import 'style_mobile';
+@import 'style_tablet';
 
 $main-color: #9356DC;
 $second-color: #FF79DA;
@@ -6,6 +7,7 @@ $third-color: #99E2D0;
 
 body {
     margin: 15px auto;
+    font-family: 'Roboto';
 
     a {
         text-decoration: none;
@@ -59,7 +61,7 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 65px;
+    // margin-top: 65px;
     padding: 5px;
     background-color: #dedcdc;
 
@@ -95,7 +97,84 @@ i.fa-solid.location_icon {
     margin-left: 10px;
 }
 
-// LOACATION
+// LOCATION
 
 // EXPLORER
+
+.explorer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+// EXPLORER
+
+
+// FONCTIONNEMENT
+
+.fonction {
+    padding: 30px 15px;
+
+    &_header {
+        font-size: 1rem;
+        margin: 0px 0px 35px 20px;
+    }
+
+    &_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-left: 10px;
+
+        &_card {
+            display: flex;
+            align-items: center;
+            background-color: #e7e7e762;
+            width: 30%;
+            height: 100px;
+            box-shadow: 2px 5px 20px rgba(167, 167, 167, 0.5);
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: default;
+            transition: transform 250ms ease-in-out;
+
+                &:hover {
+                    transform: scale(1.0);
+                    background-color: #9256dc31;
+                    .fonction_cards_card_icon {
+                        color: $main-color;
+                    }
+                }
+            
+            &_number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 35px;
+                height: 35px;
+                margin-left: -20px;
+                color: white;
+                background-color: $main-color;
+                border-radius: 30px;
+            }
+
+            &_icon {
+                color: rgba(0, 0, 0, 0.5);
+                padding: 0px 20px;
+                font-size: 25px;
+            }
+
+            &_title {
+                padding-right: 5px;
+            }    
+        }
+    }
+}
+
+// RESTAURANTS
 
