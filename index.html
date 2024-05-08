@@ -24,7 +24,7 @@
 <!-- Main -->
 <main>
 <!-- Location -->
-    <form action="#" class="location_search">
+    <form class="location_search" method="get" action="#">
         <i class="fa-solid fa-location-dot location_search_icon"></i>
         <input class="location_search_input" type="search" placeholder="Paris, Belleville">
     </form>
@@ -33,7 +33,7 @@
 <section class="explorer">
     <h1>Réservez le menu qui vous convient</h1>
     <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-    <a href="#">Explorer nos restaurants</a>
+    <button class="explorer_btn">Explorer nos restaurants</button>
 </section>
 
 <!-- Fonctionnement -->
@@ -80,10 +80,10 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_1" name="restaurant_like" value="1">
-        <label for="restaurant_1">
+        <label class="restaurants_icons icons">
+            <input type="checkbox" id="restaurant_1" name="restaurant_like" value="1">
             <i class="fa-solid fa-heart icons_like"></i>
-            <i class="fa-regular fa-heart icons_nolike"></i>
+            <i class="fa-regular fa-heart icons_no_like"></i>
         </label>
     </article>
 
@@ -99,10 +99,10 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_2" name="restaurant_like" value="2">
-        <label for="restaurant_2">
+        <label class="restaurants_icons icons">
+            <input type="checkbox" id="restaurant_2" name="restaurant_like" value="2">
             <i class="fa-solid fa-heart icons_like"></i>
-            <i class="fa-regular fa-heart icons_nolike"></i>
+            <i class="fa-regular fa-heart icons_no_like"></i>
         </label>
     </article>
 
@@ -117,10 +117,10 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_3" name="restaurant_like" value="3">
-        <label for="restaurant_3">
+        <label class="restaurants_icons icons">
+            <input type="checkbox" id="restaurant_3" name="restaurant_like" value="3">
             <i class="fa-solid fa-heart icons_like"></i>
-            <i class="fa-regular fa-heart icons_nolike"></i>
+            <i class="fa-regular fa-heart icons_no_like"></i>
         </label>
     </article>
 
@@ -135,10 +135,10 @@
                 </figcaption>
             </figure>
         </a>
-        <input type="checkbox" id="restaurant_3" name="restaurant_like" value="3">
-        <label for="restaurant_3">
+        <label class="restaurants_icons icons">
+            <input type="checkbox" id="restaurant_4" name="restaurant_like" value="4">
             <i class="fa-solid fa-heart icons_like"></i>
-            <i class="fa-regular fa-heart icons_nolike"></i>
+            <i class="fa-regular fa-heart icons_no_like"></i>
         </label>
     </article>
 </div>
@@ -151,8 +151,8 @@
         <img class="footer_logo" src="images/logo/ohmyfood@2x.svg" alt="Logo Oh My Food">
 
         <ul class="footer_list">
-            <li><a href="#" class="footer_link"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#" class="footer_link"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+            <li><a href="#" class="footer_link"><i class="fa-solid fa-utensils footer_link_icon"></i>Proposer un restaurant</a></li>
+            <li><a href="#" class="footer_link"><i class="fa-solid fa-handshake-angle footer_link_icon"></i>Devenir partenaire</a></li>
             <li><a href="#" class="footer_link">Mentions légales</a></li>
             <li><a href="#" class="footer_link">Contact</a></li>
         </ul>
