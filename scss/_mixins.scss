@@ -5,21 +5,22 @@
 }
 
 @mixin circle {
-    width: auto;
-    height: auto;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background-color: $main-color;
     display: flex;
     justify-content: center;
     align-items: center;
     color: $white-color;
-    margin: auto;
 }
 
 @mixin btn {
     outline: none;
     border: none;
     border-radius: 25px;
+    font-family: $roboto;
+    font-weight: 500;
     color: $white-color;
     background: linear-gradient($main-color, $second-color);
     box-shadow: 0px 4px 10px 0px #00000040;
