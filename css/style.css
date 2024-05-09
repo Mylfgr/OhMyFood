@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+body a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}
+body li {
+  list-style-type: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background: linear-gradient(#9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header_logo {
+  width: 200px;
+}
+
+.location_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.location_search_icon {
+  margin-right: 0.5rem;
+}
+.location_search_input {
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+.location_search ::placeholder {
+  background-color: #EAEAEA;
+  font-family: "Roboto", sans serif;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.explorer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.fonction_header {
+  text-align: center;
+  padding: 2rem;
+}
+.fonction_cards {
+  display: flex;
+  flex-direction: column;
+}
+.fonction_cards_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.fonction_cards_card_number {
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  margin: auto;
+  font-size: 1.5rem;
+}
+.fonction_cards_card_icon {
+  font-size: 1.5rem;
+  color: #7E7E7E;
+}
+
+/*# sourceMappingURL=style.css.map */

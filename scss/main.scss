@@ -1,8 +1,6 @@
 @import './variable';
 @import './mixins';
+@import './style';
 
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
+
+@import './header';

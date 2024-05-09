@@ -1,0 +1,35 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin circle {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white-color;
+    margin: auto;
+}
+
+@mixin btn {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    color: $white-color;
+    background: linear-gradient($main-color, $second-color);
+    box-shadow: 0px 4px 10px 0px #00000040;
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@mixin btnStyleHover {
+    // background: linear-gradient($main-color, $second-color);
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+}
