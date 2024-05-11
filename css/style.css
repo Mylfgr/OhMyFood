@@ -290,6 +290,10 @@ button:hover {
   margin-right: 10px;
   font-size: 12px;
 }
+.footer_link_icon_2 {
+  margin-right: 7px;
+  font-size: 11px;
+}
 
 .bar {
   border: 3px solid #99E2D0;
@@ -301,10 +305,14 @@ button:hover {
   width: 100%;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 @media (min-width: 1080px) {
   .main_restaurant {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
   }
 }
 .main_restaurant_img {
@@ -316,7 +324,9 @@ button:hover {
   background-color: #F6F6F6;
   padding-top: 1rem;
   border-radius: 40px 40px 0 0;
-  margin-top: 45px;
+  margin-top: -45px;
+  position: relative;
+  z-index: 1;
 }
 
 .container {
