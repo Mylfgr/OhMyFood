@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.loader {
+  width: fit-content;
+  padding: 20px;
+  font-weight: 500;
+  font-family: "Shrikhand";
+  font-size: 60px;
+  border-radius: 100%;
+  background: linear-gradient(90deg, #99E2D0 50%, #FF79DA 0) right/200% 100%;
+  animation: load 2s infinite linear;
+}
+
+.loader::before {
+  content: "Ohmyfood";
+  color: #9356DC;
+  padding: 0 5px;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes load {
+  100% {
+    background-position: left;
+  }
+}
 body {
   margin: 0 auto;
 }
@@ -316,7 +341,7 @@ button:hover {
   justify-content: center;
   position: relative;
 }
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   .main_restaurant {
     display: flex;
     justify-content: center;
@@ -351,7 +376,7 @@ button:hover {
   position: relative;
   right: 0;
 }
-@media (min-width: 1080px) {
+@media (min-width: 1440px) {
   .container_content {
     justify-content: center;
   }

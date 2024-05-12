@@ -1,8 +1,11 @@
 @import './variable';
 @import './mixins';
+@import './loader';
 @import './style_laptop.scss';
 
+
 // GENERAL
+
 
 *,
 ::before,
@@ -355,7 +358,7 @@ figcaption {
     justify-content: center;
     position: relative;
 
-    @media (min-width: 1080px) {
+    @media (min-width: 1440px) {
         @include flexCenter;
         width: 100%;
     }
@@ -390,7 +393,7 @@ figcaption {
             right: 0;
         }
 
-        @media (min-width: 1080px) {
+        @media (min-width: 1440px) {
             justify-content: center;
         }
 

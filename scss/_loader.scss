@@ -1,0 +1,22 @@
+.loader {
+    width: fit-content;
+    padding: 20px;
+    font-weight: 500;
+    font-family: $shrikhand;
+    font-size: 60px;
+    border-radius: 100%;
+    background:linear-gradient(90deg,$third-color 50%,$second-color 0) right/200% 100%;
+    animation: load 2s infinite linear;
+  }
+  .loader::before {
+    content :"Ohmyfood";
+    color: $main-color;
+    padding: 0 5px;
+    background: inherit;
+    -webkit-background-clip:text;
+            background-clip:text;
+  }
+  
+  @keyframes load{
+    100%{background-position: left}
+  }
