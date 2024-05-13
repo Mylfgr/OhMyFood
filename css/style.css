@@ -8,7 +8,13 @@
   font-size: 60px;
   border-radius: 100%;
   background: linear-gradient(90deg, #99E2D0 50%, #FF79DA 0) right/200% 100%;
-  animation: load 2s infinite linear;
+  animation: load 3s infinite linear, loading 3s forwards;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 .loader::before {
@@ -25,17 +31,70 @@
     background-position: left;
   }
 }
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 body {
   margin: 0 auto;
 }
 
 .fonction,
-.restaurants {
+.restaurants,
+.main_restaurant,
+.main_restaurant_menu {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@keyframes bars {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scaleY(0.25);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scaleY(0.75);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes cards {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 *,
 ::before,
 ::after {
@@ -201,6 +260,8 @@ button:hover {
 }
 
 .restaurants {
+  width: 100%;
+  margin-top: 1rem;
   padding: 20px;
   background-color: #F6F6F6;
 }
@@ -210,7 +271,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1080px) {
   .restaurants_cards {
     flex-direction: row;
   }
@@ -224,7 +285,7 @@ button:hover {
   position: relative;
   margin-bottom: 20px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1080px) {
   .restaurants_card {
     width: calc(50% - 20px);
     margin: 10px;
@@ -306,15 +367,43 @@ button:hover {
 
 .footer {
   background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.footer_logo {
-  filter: invert(100%);
-  width: 130px;
-  padding: 10px;
+.footer_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .footer_container {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 115px;
+  }
+}
+.footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
 }
 .footer_list {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .footer_list {
+    flex-direction: row;
+    margin: 20px 20px;
+    align-items: end;
+    gap: 20px;
+  }
 }
 .footer_link {
   color: #FFFFFF;
@@ -333,6 +422,8 @@ button:hover {
   border: 3px solid #99E2D0;
   width: 40px;
   margin: 5px 0;
+  animation: bars 1.5s;
+  animation-iteration-count: 1;
 }
 
 .main_restaurant {
@@ -341,7 +432,7 @@ button:hover {
   justify-content: center;
   position: relative;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .main_restaurant {
     display: flex;
     justify-content: center;
@@ -350,11 +441,13 @@ button:hover {
   }
 }
 .main_restaurant_img {
+  object-fit: cover;
   width: 100%;
   height: 280px;
 }
 .main_restaurant_menu {
-  max-width: 1080px;
+  width: 100%;
+  min-width: 375px;
   background-color: #F6F6F6;
   padding-top: 1rem;
   border-radius: 40px 40px 0 0;
@@ -417,6 +510,8 @@ button:hover {
   transform: none;
   background-color: #FFFFFF;
   margin: 10px;
+  animation: cards 1s;
+  animation-iteration-count: 1;
 }
 .container .start_box .card_content {
   flex-direction: column;
@@ -443,12 +538,14 @@ button:hover {
   height: 40px;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
+  align-self: flex-end;
   margin-right: 15px;
+  padding: 1rem;
 }
 .container .start_box .check {
   background-color: #99E2D0;
-  width: 40px;
+  width: 50px;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -458,7 +555,7 @@ button:hover {
   flex-shrink: 0;
   right: 0;
   top: 0;
-  margin-right: -50px;
+  margin-right: -60px;
 }
 
 .order {

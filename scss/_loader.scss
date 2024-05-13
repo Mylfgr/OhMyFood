@@ -6,8 +6,15 @@
     font-size: 60px;
     border-radius: 100%;
     background:linear-gradient(90deg,$third-color 50%,$second-color 0) right/200% 100%;
-    animation: load 2s infinite linear;
+    animation: load 3s infinite linear, loading 3s forwards;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
   }
+
   .loader::before {
     content :"Ohmyfood";
     color: $main-color;
@@ -17,6 +24,27 @@
             background-clip:text;
   }
   
-  @keyframes load{
-    100%{background-position: left}
+  @keyframes load {
+    100% {
+      background-position: left
+    }
+  }
+
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+      }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
