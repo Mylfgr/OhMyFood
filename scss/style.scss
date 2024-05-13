@@ -52,7 +52,15 @@
     }
 }
 
+ @keyframes heart {
+    0% {
+        clip-path: circle(0 at 50% 50%);
+    }
 
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+ }
 
 
 *,
@@ -335,6 +343,8 @@ figcaption {
                 color: $main-color;
                 opacity: 0;
                 position: absolute;
+                transform: scale(0);
+                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
             .fa_regular {
@@ -348,6 +358,8 @@ figcaption {
         .checkbox_input:checked + .checkbox_icon {
             .fa-solid {
                 opacity: 1;
+                transform: scale(1);
+                animation: heart 1s ease-in-out forwards;
             }
 
             .fa-regular {
