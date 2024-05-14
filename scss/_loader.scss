@@ -5,7 +5,11 @@
   width: 100%;
   height: 100vh;
   background-color: $dark-grey;
-  animation: showloader 2.7s forwards, hideloader 0.3s 2.7s forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: showloader 1.5s ease-in-out forwards, hideloader 1.5s ease-in-out 1.5s forwards;
 }
 
 .hidden {
