@@ -1,50 +1,79 @@
-.loader {
-    width: fit-content;
-    padding: 20px;
-    font-weight: 500;
-    font-family: $shrikhand;
-    font-size: 60px;
-    border-radius: 100%;
-    background:linear-gradient(90deg,$third-color 50%,$second-color 0) right/200% 100%;
-    animation: load 3s infinite linear, loading 3s forwards;
-    opacity: 0;
+.loader_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $dark-grey;
+  animation: showloader 2.7s forwards, hideloader 0.3s 2.7s forwards;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader_circle {
+  width: 200px;
+  height: 100px;
+  border: 3px solid $second-color;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 80px;
+    background-color: $third-color;
+    animation: load 3s infinite linear;
+    display: inline-block;
   }
 
-  .loader::before {
-    content :"Ohmyfood";
+  &::after {
+    content: 'Ohmyfood';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     color: $main-color;
-    padding: 0 5px;
-    background: inherit;
-    -webkit-background-clip:text;
-            background-clip:text;
+    font-family: $shrikhand;
+    font-weight: 500;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
   }
-  
-  @keyframes load {
-    100% {
-      background-position: left
-    }
+}
+
+@keyframes load {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes showloader {
+  0% {
+    opacity: 1;
   }
 
-  @keyframes loading {
-    0% {
-      opacity: 0;
-    }
-
-    10% {
-      opacity: 1;
-      }
-
-    90% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
+  100% {
+    opacity: 1;
   }
+}
+
+@keyframes hideloader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

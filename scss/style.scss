@@ -33,6 +33,17 @@
         opacity: 1;
     }
 }
+
+@keyframes cardmenu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes cards {
     0% {
         transform: scaleY(0);
@@ -507,7 +518,6 @@ figcaption {
     .menu_3 {
         flex-direction: column;
         justify-content: space-between;
-    
 
     & > h2 {
         font-weight: 300;
@@ -516,12 +526,62 @@ figcaption {
     }
     }
 
+    .menu_1.animate {
+        -moz-animation: cardmenu 0.5s ease-in-out forwards;
+        -webkit-animation: cardmenu 0.5s ease-in-out forwards;
+        animation: cardmenu 0.5s ease-in-out forwards;
+    }
+    .menu_2.animate {
+        -moz-animation: cardmenu 1s ease-in-out forwards;
+        -webkit-animation: cardmenu 1s ease-in-out forwards;
+        animation: cardmenu 1s ease-in-out forwards;
+    }
+    .menu_3.animate {
+        -moz-animation: cardmenu 1.5s ease-in-out forwards;
+        -webkit-animation: cardmenu 1.5s ease-in-out forwards;
+        animation: cardmenu 1.5s ease-in-out forwards;
+    }
+    
+    .menu_1 .start_box.animate:nth-child(1) {
+        animation: cards 0.3s;
+    }
+    .menu_1 .start_box.animate:nth-child(2) {
+        animation: cards 0.5s;
+    }
+    .menu_1 .start_box.animate:nth-child(3) {
+        animation: cards 1s;
+    }
+
+
+    .menu_2 .start_box.animate:nth-child(1) {
+        animation: cards 1.5s;
+    }
+    .menu_2 .start_box.animate:nth-child(2) {
+        animation: cards 2s;
+    }
+    .menu_2 .start_box.animate:nth-child(3) {
+        animation: cards 2.5s;
+    }
+
+
+    .menu_3 .start_box.animate:nth-child(1) {
+        animation: cards 3s;
+    }
+    .menu_3 .start_box.animate:nth-child(2) {
+        animation: cards 3.5s;
+    }
+    .menu_3 .start_box.animate:nth-child(3) {
+        animation: cards 4s;
+    }
+
+
     .start_box {
         border-radius: 15px;
         display: flex;
         flex-direction: row;
         overflow: hidden;
         position: relative;
+        animation: cards 2s;
 
         &:hover .check,
         &:focus-within .check {
@@ -537,8 +597,6 @@ figcaption {
             transform: none;
             background-color: $white-color;
             margin: 10px;
-            animation: cards 1s;
-            animation-iteration-count: 1;
 
             &_content {
                 flex-direction: column;
@@ -551,12 +609,18 @@ figcaption {
                     font-family: $roboto;
                     font-size: 1.125rem;
                     font-weight: 500;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
 
                 & > p {
                     font-family: $roboto;
                     font-size: 1rem;
                     font-weight: 300;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
             }
 
