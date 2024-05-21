@@ -1,0 +1,23 @@
+
+.header_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0px 2px 4px 0px #00000026;
+    position: relative;
+
+    a {
+        position: absolute;
+        left: 1rem;
+    }
+
+    &_img {
+        width: 200px;
+    }
+
+    .logo_icon {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}

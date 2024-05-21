@@ -1,6 +1,9 @@
-@import './variable';
-@import './mixins';
+@import './utils/variable';
+@import './utils/mixins';
+@import './utils/keyframes';
 @import './style';
 
 
-@import './header';
+@import './layout/loader';
+@import './layout/header';
+@import './layout/footer';
