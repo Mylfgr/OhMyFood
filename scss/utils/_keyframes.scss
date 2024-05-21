@@ -27,34 +27,20 @@
     }
 }
 
-@keyframes cardmenu {
-    0% {
-        opacity: 0;
-    }
+// Card menu
 
-    100% {
+@keyframes menu {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes cards {
-    0% {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-
-
-    50% {
-        transform: scaleX(0.5);
-        opacity: 0.5;
-    }
-
-
-    100% {
-        transform: scaleY(1.0);
-        opacity: 1;
-    }
-}
+// Animation heart checkbox
 
  @keyframes heart {
     0% {
