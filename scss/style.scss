@@ -100,7 +100,7 @@ button:hover {
 .fonction {
 
     width: 100%;
-    max-width: 1440px;
+    max-width: 1080px;
     margin: 0 auto;
 
     h2 {
@@ -156,7 +156,7 @@ button:hover {
                 color: $grey-color;
                 margin-left: 15px;
 
-                &:hover {
+                &:nth-of-type(3) {
                     color: $main-color;
                 }
             }
@@ -168,18 +168,37 @@ button:hover {
 
 .restaurants {
     width: 100%;
-    max-width: 1440px;
     margin-top: 1rem;
     padding: 20px;
     background-color: $background-2;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
+
+    h2 {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    &_container {
+        display: flex;
+        flex-direction: column; // Ajoute cette ligne
+        max-width: 1080px;
+        margin: 0 auto;
+
+        @media (min-width: 1080px) {
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
 }
 
 .restaurants_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 1080px;
+    margin: 0 auto;
 
     @media (min-width: 1440px) {
         flex-direction: row;
@@ -201,7 +220,7 @@ button:hover {
 
     &_figure {
         position: relative;
-    
+
 
     &_img {
         width: 100%;
@@ -362,6 +381,7 @@ figcaption {
         font-weight: 300;
         font-family: $roboto;
         margin-top: 15px;
+        margin-left: 10px;
     }
 }
 
