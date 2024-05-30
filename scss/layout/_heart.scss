@@ -1,44 +1,33 @@
-.box-fav {
+.checkbox_container {
     position: absolute;
     bottom: 15px;
     right: 26px;
 }
 
-@for $i from 1 through 4 {
+.checkbox_label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    position: relative;
+}
 
-    // init unche icon
-    .label-fav#{$i}::before {
-        font: var(--fa-font-regular);
-        content: "\f004";
-        font-size: 1.375rem;
-    } 
+.checkbox_label .fa-regular {
+    display: inline-block;
+}
 
-    // init checked icon
-    .label-fav#{$i}::after {
-        font: var(--fa-font-solid);
-        content: "\f004";
-        font-size: 1.375rem;
-        background: $main-color;
-        color: transparent;
-        -webkit-background-clip: text;
-        display: none; // Initialisation cachée
-        }
+.checkbox_label .fa-solid {
+    display: none;
+}
 
-    #input-fav#{$i}[type="checkbox"] {
-        display: none; // Cacher la case de la checkbox par défaut
-    }
+input[type="checkbox"]:checked + .checkbox_label .fa-regular {
+    display: none;
+}
 
-    #input-fav#{$i}[type="checkbox"]:checked + .label-fav#{$i}::before {
-        display: none; // Cacher l'icône par défaut lorsque la case est cochée
-    }
-    
-    #input-fav#{$i}[type="checkbox"]:checked + .label-fav#{$i}::after {
-        display: inline-block; // Afficher l'icône solide lorsque la case est cochée
-        animation: heart-status 400ms;
-    }
-    // Ajout de l'animation de l'état décoché
-    #input-fav#{$i}[type="checkbox"]:not(:checked) + .label-fav#{$i}::before {
-        display: inline-block;
-        animation: heart-status 100ms 2;
-    }
+input[type="checkbox"]:checked + .checkbox_label .fa-solid {
+    display: inline-block;
+    color: $main-color;
 }

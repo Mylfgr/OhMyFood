@@ -289,7 +289,7 @@ input[type="checkbox"]{
         justify-content: center;
         align-items: center;
 
-        .box-fav {
+        &_checkbox {
             display: flex;
             text-align: center;
             position: relative;
