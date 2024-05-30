@@ -5,7 +5,7 @@
 @import './layout/loader';
 @import './layout/header';
 @import './layout/footer';
-
+@import './layout/heart';
 
 
 // GENERAL
@@ -40,12 +40,8 @@ input[type="checkbox"]{
     display: none;
 }
 
-button {
+.button {
     @include btn;
-}
-
-button:hover {
-    @include btnStyleHover;
 }
 
 // LOCATION
@@ -93,6 +89,11 @@ button:hover {
         margin: 0.5rem;
     }
 
+    a.button {
+        @include btn;
+        display: inline-block;
+        margin-top: 1rem;
+    }
 }
 
 // FONCTIONNEMENT
@@ -167,148 +168,79 @@ button:hover {
 // RESTAURANTS
 
 .restaurants {
-    width: 100%;
-    margin-top: 1rem;
-    padding: 20px;
-    background-color: $background-2;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+    background: $background;
+    margin: 0 auto;
 
     h2 {
-        text-align: left;
-        padding: 1rem;
-    }
-
-    &_container {
-        display: flex;
-        flex-direction: column; // Ajoute cette ligne
         max-width: 1080px;
         margin: 0 auto;
-
-        @media (min-width: 1080px) {
-            justify-content: space-between;
-            align-items: flex-start;
-        }
+        padding: 1rem;
     }
 }
 
 .restaurants_cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     max-width: 1080px;
+    width: 100%;
+    display: grid;
     margin: 0 auto;
 
     @media (min-width: 1440px) {
-        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr); // 2 colonnes
     }
 
-}
-.restaurants_card {
-    width: 100%;
-    max-width: 490px;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 20px;
+    .card {
+        @include card;
+        margin: 10px auto;
+        min-width: 340px;
+        max-width: 490px;
 
-    @media (min-width: 1080px) {
-        width: calc(50% - 20px);
-        margin: 10px;
+        &__new {
+            font-size: 14px;
+            background-color: $third-color;
+            width: 5rem;
+            height: 30px;
+            text-align: center;
+            color: $green-color;
+            font-weight: 500;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__imgBox {
+        
+            & > img {
+                width: 100%;
+                height: 174px;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+
+        &__content {
+            padding: 10px;
+            & > h3 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+    
+            & > p {
+                font-size: 17px;
+                font-weight: 300;
+            }
+        }
     }
-
-    &_figure {
-        position: relative;
-
-
-    &_img {
-        width: 100%;
-        max-height: 280px;
-        object-fit: cover;
-    }
-}
-    &_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $white-color;
 }
 
-.new {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: $third-color;
-    color: $green-color;
-    padding: 10px;
-    font-weight: 500;
-    font-size: 0.8rem;
-    border-radius: 5px;
-}   
 
-figcaption {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        background-color: $white-color;
 
-        h3 {
-            font-weight: 700;
-        }
 
-        p {
-            font-weight: 300;
-        }
-    } 
-}
 
-.checkbox {
-        display: flex;
-        align-items: center;
-        top: 10px;
-        right: 10px;
-        padding: 10px;
-        font-size: 1.375rem;
 
-        &_input {
-            display: none;
-        }
 
-        &_icon {
-            display: inline-block;
-            position: relative;
 
-            .fa-solid {
-                color: $main-color;
-                opacity: 0;
-                position: absolute;
-                transform: scale(0);
-                transition: transform 0.3s ease, opacity 0.3s ease;
-            }
-
-            .fa_regular {
-                position: relative;
-                top: 0;
-                left: 0;
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
-        }
-        .checkbox_input:checked + .checkbox_icon {
-            .fa-solid {
-                opacity: 1;
-                transform: scale(1);
-                animation: heart 1s ease-in-out forwards;
-            }
-
-            .fa-regular {
-                opacity: 0;
-            }
-        }
-}
 
 
 // PAGE RESTAURANTS
@@ -357,9 +289,10 @@ figcaption {
         justify-content: center;
         align-items: center;
 
-        .checkbox_input {
+        .box-fav {
+            display: flex;
+            text-align: center;
             position: relative;
-            right: 0;
         }
 
         @media (min-width: 1440px) {

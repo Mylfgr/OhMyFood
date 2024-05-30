@@ -10,11 +10,11 @@
 <body>
 <!-- Header -->
 <header>
-    <div class="header_logo">
+    <div class="logo">
         <a href="../index.html">
             <i class="fa-solid fa-arrow-left logo_icon"></i>
         </a>
-            <img class="header_logo_img" src="../images/logo/ohmyfood.png" alt="Logo du site Ohmyfood">
+            <img class="logo__img" src="../images/logo/ohmyfood.png" alt="Logo du site Ohmyfood">
     </div>
 </header>
     
@@ -24,13 +24,10 @@
             <div class="container">
                 <div class="container_content">
                     <h1>À la française</h1>
-                    <label class="checkbox">
-                        <input type="checkbox" class="checkbox_input">
-                        <div class="checkbox_icon">
-                            <i class="fa-solid fa-heart"></i>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </label>
+                    <form action="#" method="get" class="box-fav">
+                        <input type="checkbox" name="like" id="input-fav1">
+                        <label for="input-fav1" class="label-fav1"></label>
+                    </form>
                 </div>
 
                 <!-- Entrées -->
@@ -173,7 +170,7 @@
                 </section>
 
                 <div class="order">
-                    <button>Commander</button>
+                    <a href="#restaurants" class="button">Commander</a>
                 </div>
             </div>
         </div>
