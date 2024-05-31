@@ -21,7 +21,9 @@
 
 .checkbox_label .fa-solid {
     display: none;
+    position: relative;
 }
+
 
 input[type="checkbox"]:checked + .checkbox_label .fa-regular {
     display: none;
@@ -30,4 +32,5 @@ input[type="checkbox"]:checked + .checkbox_label .fa-regular {
 input[type="checkbox"]:checked + .checkbox_label .fa-solid {
     display: inline-block;
     color: $main-color;
+    animation: heart 1s forwards;
 }
