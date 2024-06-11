@@ -1,12 +1,11 @@
 @import './utils/variable';
 @import './utils/mixins';
 @import './utils/keyframes';
-@import './style';
-
 
 @import './layout/loader';
 @import './layout/header';
 @import './layout/footer';
+@import './layout/heart';
 
-// @import '/pages/_restaurant';
-// @import '/pages/style';
+@import './pages/style';
+@import './pages/restaurant';

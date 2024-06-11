@@ -407,6 +407,7 @@ input[type=checkbox] {
 .restaurants {
   background: #EAEAEA;
   margin: 0 auto;
+  padding-bottom: 15px;
 }
 .restaurants h2 {
   max-width: 1080px;
@@ -420,7 +421,7 @@ input[type=checkbox] {
   display: grid;
   margin: 0 auto;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants_cards {
     grid-template-columns: repeat(2, 1fr);
   }

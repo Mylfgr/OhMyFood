@@ -1,3 +1,5 @@
+// GENERAL
+
 *,
 ::before,
 ::after {
@@ -158,6 +160,7 @@ input[type="checkbox"]{
 .restaurants {
     background: $background;
     margin: 0 auto;
+    padding-bottom: 15px;
 
     h2 {
         max-width: 1080px;
@@ -172,7 +175,7 @@ input[type="checkbox"]{
     display: grid;
     margin: 0 auto;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
         grid-template-columns: repeat(2, 1fr); // 2 colonnes
     }
 
