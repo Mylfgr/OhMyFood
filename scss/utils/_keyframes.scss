@@ -38,4 +38,17 @@
         opacity: 1;
         transform: translateX(0);
     }
-}
+    }
+
+
+// Animation heart checkbox
+
+ @keyframes heart {
+    0% {
+        clip-path: circle(0 at 50% 50%);
+    }
+
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+ }
