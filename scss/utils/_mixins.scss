@@ -4,16 +4,6 @@
     align-items: center;
 }
 
-@mixin circle {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: $main-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white-color;
-}
 
 @mixin btn {
     outline: none;
