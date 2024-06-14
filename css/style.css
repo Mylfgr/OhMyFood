@@ -40,6 +40,14 @@
     clip-path: circle(100% at 50% 50%);
   }
 }
+@keyframes heart-reverse {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
 .loader_body {
   display: flex;
   justify-content: center;
@@ -234,6 +242,10 @@ input[type=checkbox]:checked + .checkbox_label .fa-solid {
   display: inline-block;
   color: #9356DC;
   animation: heart 1s forwards;
+}
+
+input[type=checkbox]:not(:checked) + .checkbox_label .fa-regular {
+  animation: heart-reverse 1s forwards;
 }
 
 *,

@@ -34,3 +34,7 @@ input[type="checkbox"]:checked + .checkbox_label .fa-solid {
     color: $main-color;
     animation: heart 1s forwards;
 }
+
+input[type="checkbox"]:not(:checked) + .checkbox_label .fa-regular {
+    animation: heart-reverse 1s forwards;
+}
